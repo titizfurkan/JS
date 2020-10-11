@@ -66,6 +66,13 @@ form button:hover {
   background: #ff6f47;
   color: white;
 }
+
+@media only screen and (max-width: 600px) {
+  form input,form button {
+      font-size: 1rem;
+  }
+}
+
 .todo-container {
   display: flex;
   justify-content: center;
