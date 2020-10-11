@@ -1,4 +1,5 @@
 import React from "react";
+import swal from "sweetalert";
 
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
   const inputTextHandler = (e) => {
@@ -6,14 +7,20 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
   };
   const submitTodoHandler = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos,
-      {
-        text: inputText,
-        completed: false,
-        id: Math.random() * 1000,
-      },
-    ]);
+    if (inputText.length !== 0) {
+      setTodos([
+        ...todos,
+        {
+          text: inputText,
+          completed: false,
+          id: Math.random() * 1000,
+        },
+      ]);
+    }
+    else{
+      swal("UYARI", "Yapılacaklar Listesi'ne boş görev eklenemez.", "error");  
+      // alert("Yapılacaklar Listesi'ne boş görev eklenemez.");
+    }
     setInputText("");
   };
   const statusHandler = (e) => {

@@ -37,10 +37,12 @@ form {
   align-items: center;
 }
 
+
+
 @media only screen and (max-width: 600px) {
   form {
     width: 50%;
-    min-height: 10vh;
+    min-height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +63,7 @@ form button {
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-left: 1px solid #c4735d;
 }
 form button:hover {
   background: #ff6f47;
@@ -68,8 +71,9 @@ form button:hover {
 }
 
 @media only screen and (max-width: 600px) {
-  form input,form button {
-      font-size: 1.5rem;
+  form input,
+  form button {
+    font-size: 1.5rem;
   }
 }
 
@@ -88,12 +92,32 @@ form button:hover {
   margin: 0.5rem;
   background: white;
   font-size: 1.5rem;
+  width: 23rem;
   color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+@media only screen and (max-width: 600px) {
+  .todo {
+    margin: 0.5rem;
+    background: white;
+    font-size: 1rem;
+    width: 15rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .filter-todo {
   padding: 1rem;
 }
