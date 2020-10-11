@@ -14,8 +14,7 @@
     font-size: 2rem;
     text-align: center;
      background: -webkit-linear-gradient(#f6d365, #ff6f47);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   @media only screen and (max-width: 600px) {
