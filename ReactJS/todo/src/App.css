@@ -37,12 +37,10 @@ form {
   align-items: center;
 }
 
-
-
 @media only screen and (max-width: 600px) {
-  form {
+  form,header {
     width: 50%;
-    min-height: 5vh;
+    min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
