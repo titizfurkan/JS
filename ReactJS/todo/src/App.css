@@ -38,14 +38,22 @@ form {
 }
 
 @media only screen and (max-width: 600px) {
-  form,header {
+  header {
     width: 50%;
+    min-height: 10vh;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    width: 100%;
     min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -69,7 +77,12 @@ form button:hover {
 }
 
 @media only screen and (max-width: 600px) {
-  form input,
+  form input {
+    font-size: 1.5rem;
+    width: 15rem;
+  }
+}
+@media only screen and (max-width: 600px) {
   form button {
     font-size: 1.5rem;
   }
@@ -96,8 +109,6 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media only screen and (max-width: 600px) {
@@ -108,11 +119,8 @@ form button:hover {
     width: 15rem;
     color: black;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     transition: all 1s ease;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
