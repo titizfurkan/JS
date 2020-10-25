@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Reçeteler",
-    "slug": "receteler",
+    "name": "Hesaplamalar",
+    "slug": "hesaplamalar",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,11 +17,11 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.titiz.receteler",
+      "bundleIdentifier": "com.titiz.hesaplamalar",
       "buildNumber": "1.0.0"
     },
     "android": {
-      "package": "com.titiz.receteler",
+      "package": "com.titiz.hesaplamalar",
       "versionCode": 1
     },
     "web": {
