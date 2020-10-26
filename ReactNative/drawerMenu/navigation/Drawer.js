@@ -7,10 +7,9 @@ import {
   DrawerContentScrollView,
 } from "@react-navigation/drawer";
 import Animated from "react-native-reanimated";
-import { Feather} from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 import { Block, Button, Text } from "expo-ui-kit";
 import { LinearGradient } from "expo-linear-gradient";
-
 // screens
 import BirimDonusturucu from "../screens/BirimDonusturucu";
 import FinansHesaplamalari from "../screens/FinansHesaplamalari";
@@ -19,9 +18,16 @@ import InsaatMaaliyet from "../screens/InsaatMaaliyet";
 import SaglikHesaplamalari from "../screens/SaglikHesaplamalari";
 import VergiHesaplamalari from "../screens/VergiHesaplamalari";
 import IstatistikHesaplamalari from "../screens/IstatistikHesaplamalari";
+//screens -> Birim Dönüştürücüler
 import EnerjiBirimCevirici from "../screens/EnerjiBirimCevirici";
 import SicaklikBirimCevirici from "../screens/SicaklikBirimCevirici";
 import ZamanBirimCevirici from "../screens/ZamanBirimCevirici";
+import UzunlukBirimCevirici from "../screens/UzunlukBirimCevirici";
+import AlanBirimCevirici from "../screens/AlanBirimCevirici";
+import HizBirimCevirici from "../screens/HizBirimCevirici";
+import BasincBirimCevirici from "../screens/BasincBirimCevirici";
+import AgirlikBirimCevirici from "../screens/AgirlikBirimCevirici";
+import KuvvetBirimCevirici from "../screens/KuvvetBirimCevirici";
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -45,7 +51,6 @@ const Screens = ({ navigation, style }) => {
           ),
         }}
       >
-
         <Stack.Screen name="BirimDonusturucu">
           {(props) => <BirimDonusturucu {...props} />}
         </Stack.Screen>
@@ -74,6 +79,8 @@ const Screens = ({ navigation, style }) => {
           {(props) => <IstatistikHesaplamalari {...props} />}
         </Stack.Screen>
 
+        {/* Birim Dönüştürücüler */}
+
         <Stack.Screen name="EnerjiBirimCevirici">
           {(props) => <EnerjiBirimCevirici {...props} />}
         </Stack.Screen>
@@ -81,11 +88,34 @@ const Screens = ({ navigation, style }) => {
         <Stack.Screen name="SicaklikBirimCevirici">
           {(props) => <SicaklikBirimCevirici {...props} />}
         </Stack.Screen>
-        
+
         <Stack.Screen name="ZamanBirimCevirici">
           {(props) => <ZamanBirimCevirici {...props} />}
         </Stack.Screen>
 
+        <Stack.Screen name="UzunlukBirimCevirici">
+          {(props) => <UzunlukBirimCevirici {...props} />}
+        </Stack.Screen>
+
+        <Stack.Screen name="AlanBirimCevirici">
+          {(props) => <AlanBirimCevirici {...props} />}
+        </Stack.Screen>
+
+        <Stack.Screen name="HizBirimCevirici">
+          {(props) => <HizBirimCevirici {...props} />}
+        </Stack.Screen>
+
+        <Stack.Screen name="BasincBirimCevirici">
+          {(props) => <BasincBirimCevirici {...props} />}
+        </Stack.Screen>
+
+        <Stack.Screen name="AgirlikBirimCevirici">
+          {(props) => <AgirlikBirimCevirici {...props} />}
+        </Stack.Screen>
+
+        <Stack.Screen name="KuvvetBirimCevirici">
+          {(props) => <KuvvetBirimCevirici {...props} />}
+        </Stack.Screen>
       </Stack.Navigator>
     </Animated.View>
   );
@@ -103,11 +133,15 @@ const DrawerContent = (props) => {
           <Text white title center bold>
             Hesaplamalar
           </Text>
-          <View style={{borderBottomColor: 'white', borderBottomWidth: 1, marginTop: 8}}>
-
-          </View>
+          <View
+            style={{
+              borderBottomColor: "white",
+              borderBottomWidth: 1,
+              marginTop: 8,
+            }}
+          ></View>
         </Block>
-        <Block style={{width:'120%', marginTop: -15}}>
+        <Block style={{ width: "120%", marginTop: -15 }}>
           <DrawerItem
             label="Birim Dönüştürücü"
             labelStyle={styles.drawerLabel}
@@ -151,7 +185,7 @@ const DrawerContent = (props) => {
 
 export default () => {
   const [progress, setProgress] = React.useState(new Animated.Value(0));
-  
+
   const scale = Animated.interpolate(progress, {
     inputRange: [0, 1],
     outputRange: [1, 0.8],
@@ -201,8 +235,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.44,
     shadowRadius: 10.32,
     elevation: 5,
-    // overflow: 'scroll',
-    // borderWidth: 1,
   },
   drawerStyles: { flex: 1, width: "60%", backgroundColor: "transparent" },
   drawerItem: { alignItems: "flex-start", marginVertical: 0 },

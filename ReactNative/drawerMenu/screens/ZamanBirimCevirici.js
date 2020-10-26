@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View, TextInput, Button, SafeAreaView, StatusBar, Image } from "react-native";
 import Constants from "expo-constants";
 
-export default class SicaklikBirimCevirici extends Component {
+export default class ZamanBirimCevirici extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -292,6 +292,11 @@ export default class SicaklikBirimCevirici extends Component {
         <SafeAreaView style={styles.container}>
         <View style={styles.contentWrapper}>
           <StatusBar style="auto" />
+          <View style={styles.header}>
+          <Text style={{ fontWeight: "500", fontSize: 16, marginBottom: 20 }}>
+            Zaman Birim Çevirici
+          </Text>
+        </View>
           <TextInput
             style={styles.input}
             placeholder="Çevirilecek Sayı"
@@ -340,7 +345,7 @@ export default class SicaklikBirimCevirici extends Component {
             />
           </View>
 
-          <View style={{padding: 15}}></View>
+          <View style={{padding: 10}}></View>
 
           <Text style={styles.sampleText}> Sn   : {this.state.saniye}</Text>
           <Text style={styles.sampleText}> D    : {this.state.dakika}</Text>
@@ -374,7 +379,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   button: {
-    width: 60,
+    width: 70,
     height: "auto",
     margin: 5,
     borderRadius: 15,
@@ -399,12 +404,11 @@ const styles = StyleSheet.create({
     color: "white",
     backgroundColor: "#4f4f4f",
     fontSize: 24,
-    marginTop: 10,
   },
-  imageStyle: {
-    width: 120,
-    height: 70,
+  header: {
+    width: "100%",
+    alignItems: "center",
     justifyContent: "center",
-    alignItems: "center"
-  }
+    backgroundColor: "transparent",
+  },
 });

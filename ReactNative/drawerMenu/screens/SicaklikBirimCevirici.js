@@ -158,18 +158,18 @@ export default class SicaklikBirimCevirici extends Component {
   }
 
   clearMethod() {
-    const joule = 0;
-    const cal = 0;
-    const kcal = 0;
-    const Kwh = 0;
-    const mj = 0;
+    const celcius= 0;
+    const fahrenheit= 0;
+    const rankine= 0;
+    const reamur= 0;
+    const kelvin= 0;
 
     this.setState({
-      joule: joule,
-      cal: cal,
-      kcal: kcal,
-      Kwh: Kwh,
-      mj: mj,
+      celcius: celcius,
+      fahrenheit: fahrenheit,
+      rankine: rankine,
+      reamur: reamur,
+      kelvin: kelvin,
     });
   }
 
@@ -178,6 +178,12 @@ export default class SicaklikBirimCevirici extends Component {
         <SafeAreaView style={styles.container}>
         <View style={styles.contentWrapper}>
           <StatusBar style="auto" />
+          
+          <View style={styles.header}>
+          <Text style={{ fontWeight: "500", fontSize: 16, marginBottom: 20 }}>
+            Sıcaklık Birim Çevirici
+          </Text>
+        </View>
           <TextInput
             style={styles.input}
             placeholder="Çevirilecek Sayı"
@@ -218,7 +224,7 @@ export default class SicaklikBirimCevirici extends Component {
             />
           </View>
 
-          <View style={{padding: 15}}></View>
+          <View style={{padding: 10}}></View>
 
           <Text style={styles.sampleText}> °C   : {this.state.celcius}</Text>
           <Text style={styles.sampleText}> °F   : {this.state.fahrenheit}</Text>
@@ -275,12 +281,11 @@ const styles = StyleSheet.create({
     color: "white",
     backgroundColor: "#4f4f4f",
     fontSize: 24,
-    marginTop: 10,
   },
-  imageStyle: {
-    width: 120,
-    height: 70,
+  header: {
+    width: "100%",
+    alignItems: "center",
     justifyContent: "center",
-    alignItems: "center"
-  }
+    backgroundColor: "transparent",
+  },
 });

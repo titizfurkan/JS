@@ -178,6 +178,13 @@ export default class EnerjiBirimCevirici extends Component {
         <SafeAreaView style={styles.container}>
         <View style={styles.contentWrapper}>
           <StatusBar style="auto" />
+
+          <View style={styles.header}>
+          <Text style={{ fontWeight: "500", fontSize: 16, marginBottom: 20 }}>
+            Enerji Birim Çevirici
+          </Text>
+        </View>
+
           <TextInput
             style={styles.input}
             placeholder="Çevirilecek Sayı"
@@ -218,7 +225,7 @@ export default class EnerjiBirimCevirici extends Component {
             />
           </View>
 
-          <View style={{padding: 15}}></View>
+          <View style={{padding: 10}}></View>
 
           <Text style={styles.sampleText}> Joule : {this.state.joule}</Text>
           <Text style={styles.sampleText}> Cal     : {this.state.cal}</Text>
@@ -275,12 +282,11 @@ const styles = StyleSheet.create({
     color: "white",
     backgroundColor: "#4f4f4f",
     fontSize: 24,
-    marginTop: 10,
   },
-  imageStyle: {
-    width: 120,
-    height: 70,
+  header: {
+    width: "100%",
+    alignItems: "center",
     justifyContent: "center",
-    alignItems: "center"
-  }
+    backgroundColor: "transparent",
+  },
 });

@@ -21,10 +21,10 @@ export default ({ navigation, style }) => {
         
         <TouchableOpacity
             style={styles.box}
-            onPress={() => navigation.navigate("FinansHesaplamalari")}
+            onPress={() => navigation.navigate("KuvvetBirimCevirici")}
           >
             <View style={styles.inner}>
-            <Text>Açı Birim</Text>
+            <Text>Kuvvet Birim</Text>
               <Text>Çevirici</Text>
             </View>
           </TouchableOpacity>
@@ -32,7 +32,7 @@ export default ({ navigation, style }) => {
 
           <TouchableOpacity
             style={styles.box}
-            onPress={() => navigation.navigate("FinansHesaplamalari")}
+            onPress={() => navigation.navigate("AgirlikBirimCevirici")}
           >
             <View style={styles.inner}>
               <Text>Ağırlık Birim</Text>
@@ -42,7 +42,7 @@ export default ({ navigation, style }) => {
 
           <TouchableOpacity
             style={styles.box}
-            onPress={() => navigation.navigate("FinansHesaplamalari")}
+            onPress={() => navigation.navigate("BasincBirimCevirici")}
           >
             <View style={styles.inner}>
             <Text>Basınç Birim</Text>
@@ -52,7 +52,7 @@ export default ({ navigation, style }) => {
 
           <TouchableOpacity
             style={styles.box}
-            onPress={() => navigation.navigate("FinansHesaplamalari")}
+            onPress={() => navigation.navigate("HizBirimCevirici")}
           >
             <View style={styles.inner}>
             <Text>Hız Birim</Text>
@@ -62,7 +62,7 @@ export default ({ navigation, style }) => {
 
           <TouchableOpacity
             style={styles.box}
-            onPress={() => navigation.navigate("FinansHesaplamalari")}
+            onPress={() => navigation.navigate("AlanBirimCevirici")}
           >
             <View style={styles.inner}>
             <Text>Alan Birim</Text>
@@ -72,7 +72,7 @@ export default ({ navigation, style }) => {
 
           <TouchableOpacity
             style={styles.box}
-            onPress={() => navigation.navigate("FinansHesaplamalari")}
+            onPress={() => navigation.navigate("UzunlukBirimCevirici")}
           >
             <View style={styles.inner}>
             <Text>Uzunluk Birim</Text>
@@ -90,6 +90,7 @@ export default ({ navigation, style }) => {
             </View>
           </TouchableOpacity>
 
+          
           <TouchableOpacity
             style={styles.box}
             onPress={() => navigation.navigate("SicaklikBirimCevirici")}
@@ -132,7 +133,7 @@ const styles = StyleSheet.create({
   box: {
     width: "33%",
     height: "33%",
-    padding: 5,
+    padding: 5,   
   },
   inner: {
     flex: 1,
