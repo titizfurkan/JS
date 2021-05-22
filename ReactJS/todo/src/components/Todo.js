@@ -1,12 +1,6 @@
 import React from "react";
 
 const Todo = ({ text, todo, setTodos, todos }) => {
-  //   const deleteHandler = () => {
-  //     setTodos(todos.filter((el) => el.id !== todo.id));
-  //     var element = document.getElementsByClassName("todo");
-  //     element.className += "fall";
-  //   };
-
   function removeLocalTodos(todo) {
     let todos;
     if (localStorage.getItem("todos") === null) {
@@ -23,12 +17,10 @@ const Todo = ({ text, todo, setTodos, todos }) => {
     const item = e.target;
 
     if (item.classList[0] === "trash-btn") {
-      // e.target.parentElement.remove();
       const todo = item.parentElement;
       todo.classList.add("fall");
-      //at the end
       removeLocalTodos(todo);
-      todo.addEventListener("transitionend", (e) => {
+      todo.addEventListener("transitionend", () => {
         todo.remove();
       });
     }

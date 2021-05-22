@@ -19,7 +19,6 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     }
     else{
       swal("UYARI", "Yapılacaklar Listesi'ne boş görev eklenemez.", "error");  
-      // alert("Yapılacaklar Listesi'ne boş görev eklenemez.");
     }
     setInputText("");
   };
